@@ -1,4 +1,10 @@
-<div class="flex-container">
-  <p>my cool chrome extension</p>
-  <button>Click for nothin</button>
-</div>
+<span [style.color]="color" 
+  [cpToggle]="true" 
+  [cpDialogDisplay]="'inline'" 
+  [cpPositionRelativeToArrow]="true"
+  [(colorPicker)]="color" 
+  [cpOKButtonText]="'Apply'" 
+  [cpOKButton]="true"
+  (colorPickerChange)="updateColor($event)"
+  (colorPickerSelect)="colorize()">
+</span>
